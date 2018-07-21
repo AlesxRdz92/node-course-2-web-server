@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 var app = express();
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 hbs.registerHelper('getCurrentYear', () => {
     return new Date().getFullYear()
@@ -44,6 +45,6 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('The server is up in the port 3000');
 });
