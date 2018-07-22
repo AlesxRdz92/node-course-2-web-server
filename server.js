@@ -45,6 +45,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs'), {
+        pageTittle: 'Projects'
+    }
+});
+
 app.listen(port, () => {
     console.log('The server is up in the port 3000');
 });
